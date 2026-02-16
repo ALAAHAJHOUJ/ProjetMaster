@@ -1,8 +1,10 @@
 import React from 'react'
 
-function Recette({indice}) {
+function Recette(props) {
   return (
-    <div>Recette{indice}</div>
+    <div>
+      {props.id}
+    </div>
   )
 }
 

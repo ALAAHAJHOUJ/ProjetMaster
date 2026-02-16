@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import Acceuil from "./pages/Acceuil"
 import NotFound from "./components/NotFound"
 import Recette from "./components/Recette"
+import RecetteDetails from "./pages/recetteDetails"
 
 
 
@@ -12,8 +13,8 @@ const Routes=createBrowserRouter([
     element:<Acceuil></Acceuil>
   },
   {
-    path:"/:id",
-    element:<Recette></Recette>
+    path:"/:id/Details",
+    element:<RecetteDetails></RecetteDetails>
   }
   ,{
     path:"*",
