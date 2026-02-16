@@ -1,11 +1,34 @@
+import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import Acceuil from "./pages/Acceuil"
+import NotFound from "./components/NotFound"
+import Recette from "./components/Recette"
 
+
+
+
+const Routes=createBrowserRouter([
+  {
+    path:"/",
+    element:<Acceuil></Acceuil>
+  },
+  {
+    path:"/:id",
+    element:<Recette></Recette>
+  }
+  ,{
+    path:"*",
+    element:<NotFound></NotFound>
+  }
+])
 
 function App() {
 
 
   return (
     <>
-      <div className='border-black border-[2px] w-[100px] h-[100px] bg-red-500'></div>
+      <RouterProvider router={Routes}>
+
+      </RouterProvider>
     </>
   )
 }
