@@ -1,8 +1,8 @@
 import React from 'react'
 
-function Recette() {
+function Recette({indice}) {
   return (
-    <div>Recette</div>
+    <div>Recette{indice}</div>
   )
 }
 
