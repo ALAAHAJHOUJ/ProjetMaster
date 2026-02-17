@@ -14,7 +14,8 @@ function Acceuil() {
 
     //on doit maintenant filtrer en se basant sur text1
      const listeFiltre=fichier.content.filter((ele,key)=>{
-      return ele.description.includes(text1)||ele.ingredients.includes(text1)||ele.titre.includes(text1)
+      const text2=text1.toLowerCase()
+      return ele.description.toLowerCase().includes(text2)||ele.ingredients.includes(text2)||ele.titre.toLowerCase().includes(text2)
      })
 
      setListe(listeFiltre)

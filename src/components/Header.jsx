@@ -7,10 +7,10 @@ function Header(props) {
   const champs=useRef()
 
 
-  const verifier=()=>{
+  const envoyer=()=>{
 
 
-     if(champs.current.value.trim().length>=3){  //on doit d'abors verifier que la taille de la  valeur du champs est supérieur a 3
+     if(champs.current.value.trim().length>=3){  //on doit d'abord verifier que la taille de la  valeur du champs est supérieur a 3
       console.log(champs.current.value) 
       props.changer(champs.current.value)
      }
@@ -27,7 +27,7 @@ function Header(props) {
                     <h1 className='text-[#FFD15B] leading-[1.1] font-[400] inline-block max-w-[50%] text-[clamp(1rem,4vw,44px)] text-center mb-2'>DECOUVEREZ NOS TENDANCES QUI FLAMBENT A TRAVERS NOS MEILLEURES RECETTES</h1>
                     <div className='w-[50%] min-w-[200px] h-[clamp(52px,8vw,72px)] relative flex justify-end items-center'>
                         <input ref={champs} type="text" className='w-full h-full absolute right-0 top-0 bg-[#6362629a] rounded-[10px] box-border pl-5 placeholder:text-[#a1a1a1] text-white' placeholder='Saisir une valeur...' />
-                        <div onClick={verifier} className='group aspect-square hover:bg-[#FFD15B] cursor-pointer transition-all duration-500 h-[65%] aspect-square bg-[#212121] rounded-[10px] mr-4 z-30 flex justify-center items-center'>
+                        <div onClick={envoyer} className='group aspect-square hover:bg-[#FFD15B] cursor-pointer transition-all duration-500 h-[65%] aspect-square bg-[#212121] rounded-[10px] mr-4 z-30 flex justify-center items-center'>
                           <IoIosSearch size={30} className=' text-white group-hover:text-black transition-all duration-500'></IoIosSearch>
                         </div>
                     </div>
