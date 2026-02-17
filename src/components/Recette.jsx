@@ -4,7 +4,7 @@ function Recette(props) {
 
 
   return (
-    <div className='w-[380px] max-[450px]:w-[90%] h-[980px] overflow-hidden shadow-[0px_4px_34px_30px_rgba(0,0,0,0.04)] bg-white rounded-[21px]'>
+    <div className='w-[380px] max-[450px]:w-[90%] h-[780px] overflow-hidden shadow-[0px_4px_34px_30px_rgba(0,0,0,0.04)] bg-white rounded-[21px]'>
        <img src={props.image} alt='image de projet' className='w-[100%]' />
        <div className='w-full box-border pt-5 pl-6'>
           <span className='text-[17px] font-[500]'>{props.titre}</span>
